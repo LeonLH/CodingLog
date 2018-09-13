@@ -1,0 +1,34 @@
+CodingLog 主要是用于记录自己每天的Coding，以帮助自己更好的在编程方面取得进步，就用中文写，暂时先不用英文，可以写成Markdown格式的。
+把每天遇到的问题记录下来，感觉中文和vim很不好配合，要不用英文的吧(Try to use English, but not limited to use it only)! 另外要用GitHub托管一下，刚才就误删了上周五写的一天的日志。
+Sun Sep  2 17:51:51 CST 2018
+1.  
+
+
+Thu Sep 13 08:58:35 CST 2018
+1. mkdir -p dir1/dir2/dir3 //循环的创建目录
+mkdir -p dir1/{subdir1/{subsubdir1, subsubdir2, subsubdir3}, subdir2, subdir3}	//循环的创建多个目录(包括子目录的目录)，包含子目录
+2. 字符串和数字之间的转换：
+- atoi
+	char[]/char* ---> int
+	类似的还有atol,atof
+- stoi
+	std::string ---> int
+	类似的还有stol,stof. 逆变换有strtol,strtof
+3. g++ xxx.cpp -o xxx.out -g -std=c++11	//使用c++11标准编译程序;
+4. std::string
+- begin()/end() return an iterator,通常用来作为循环的开头和结尾；
+- back()/front(),返回串的最后一个/首个元素的位置，可以取出该元素，也可以对该位置赋值；
+- pop_back()/push_back(),弹出/压入最后一个元素；
+- erase(),擦除元素，减小长度；
+5. gdb
+- 在子函数中如何查看父函数中的变量的值
+using "f numberOfFunction" to change which function you are at;
+numberOfFunction can be found by using bt command;
+- 基本用法：b->break/s->step/n->next/bt->backtrace/q->quit/r->run/info b/p->print/c->continue/f->frame/info local/d->delete breakpoint/
+- 反向单步调试，要在g++编译的时候添加标志：-static
+6. iterator溢出的判断条件: it != xxx.end();
+7. The differential between ++i and i++ in for loop:
+对于for循环来说，递增条件++i和i++是没有区别的，都是先执行for循环内的语句，最后再++，++i速度比i++快一点；
+8. 递归的边界条件是什么？或者出口是什么？
+9. 链表本质就是一个结点，一个指向下一节点的指针；
+
