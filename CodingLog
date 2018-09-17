@@ -100,12 +100,6 @@ Memoization			Reservoir Sampling	Geometry				Random				Rejection Sampling
 
 2.*p+1 and *(p+1) 如果用p作迭代的话别忘了之后要给p加加，熟练了之后用*p++/*(p++)一步就完成了;
 3.how to upload my code to leetcode?
-vim register:
-	appending to register:	"k+command ex:"kyy		//copy the line of cursor
-	using register:			"k+command ex:"kp		//paste content of registe.
-	system clipboard:		"+
-
-	appending to register:	"k+command ex:"kyy		//copy the line of cursor
 
 4.shadowsocks of ec2 collapse:	try to connect to remote ec2 by ssh in linux:
 	1.use a private key from windows the key is unique, and only with that key can I connect to ec2.4.shadowsocks of ec2 collapse:	try to connect to remote ec2 by ssh in linux.
@@ -113,20 +107,22 @@ vim register:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Mon Sep 17 09:52:10 CST 2018
+1. How to use vim's register?
+	1.	"ayw	//copy a word to register a;
+		"Ayw	//append a word to register a;
+		"ap		//paste register a's content;
+		//yw can be any other command such as yy/dd/dw etc.
+	2.	"+yw	//copy a word to system clipboard;
+		//Make sure your vim support clipboard by typing "vim --version", the result it +clipboard;
+		//If it don't support clipboard, typing "sudo apt-get install gnome-vim" to install.
+2. Make function main() as a test function, do not add additional function to complex problem. Focus on the PRIMARY PROBLEM.
+3. leetcode of mergeTwoSortedList:
+	Don't forget to consider the situation this: one of list if blank;4. git ingore file:
+	```
+# Compile file:
+*.o
+*.out
+	```
+5.How to make assignment for vector<vector<int>> data structure?
+	在初始化的时候可以用 = 来赋值，其他的时候不可以，要用push_back()函数来赋值。
