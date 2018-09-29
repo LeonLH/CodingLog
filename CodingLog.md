@@ -18,13 +18,18 @@ mkdir -p dir1/{subdir1/{subsubdir1, subsubdir2, subsubdir3}, subdir2, subdir3}	/
 4. std::string
 - begin()/end() return an iterator,通常用来作为循环的开头和结尾；
 - back()/front(),返回串的最后一个/首个元素的位置，可以取出该元素，也可以对该位置赋值；
-- pop_back()/push_back(),弹出/压入最后一个元素；
+- `pop_back()/push_back()`,弹出/压入最后一个元素；
 - erase(),擦除元素，减小长度；
 5. gdb
 - 在子函数中如何查看父函数中的变量的值
 using "f numberOfFunction" to change which function you are at;
 numberOfFunction can be found by using bt command;
-- 基本用法：b->break/s->step/n->next/bt->backtrace/q->quit/r->run/info b/p->print/c->continue/f->frame/info local/d->delete breakpoint/
+- 基本用法：
+```
+b->break/	s->step/	n->next/	bt->backtrace/	q->quit/
+r->run/		info b/		p->print/	c->continue/	f->frame/
+info local/	d->delete 	breakpoint/
+```
 - 反向单步调试，要在g++编译的时候添加标志：-static
 6. iterator溢出的判断条件: it != xxx.end();
 7. The differential between ++i and i++ in for loop:
@@ -62,15 +67,15 @@ Fri Sep 14 10:40:33 CST 2018
 	see proceesor register: 		info register	
 	debug with core file:			core FILENAME	//当出现了crash会给出core dump file，可以根据这个文件来debug
 	see assembly code:				disassemble main	//查看main函数的汇编代码
-2.How to Inspect standard container:
+2. How to Inspect standard container:
 	Using GDB MACRO appending it to ~/.gdbinit
 	reference to: https://gist.github.com/skyscribe/3978082
-3.Vim 中{{->跳到首行，}}->跳到尾行
-4.How to quickly navigate in the cpp source file
+3. Vim 中{{->跳到首行，}}->跳到尾行
+4. How to quickly navigate in the cpp source file
 
-5.Backup configuration file:
+5. Backup configuration file:
 .vimrc .gdbinit
-6.std::list中的iterator可以取出值，但是可以对其进行赋值操作吗？
+6. std::list中的iterator可以取出值，但是可以对其进行赋值操作吗？
 可以！
 std::list.emplace的作用
 
@@ -162,7 +167,7 @@ reference: https://github.com/Valloric/YouCompleteMe
 5. Using <F5> to compile current file:
 	write into .vimrc with the following content:
 	```
-	autocmd FileType cpp nnoremap <buffer> <F5> :w<Bar>!g++ -g % -o %:r -std=c++11 
+	autocmd FileType cpp nnoremap <buffer> <F5> :w<Bar>!g++ -g % -o %:r -std=c++11<CR>
 	```
 	
 Sun Sep 22 09:17:24 CST 2018
@@ -171,7 +176,7 @@ Sun Sep 22 09:17:24 CST 2018
 Sun Sep 23 08:09:37 CST 2018
 1. The source doesn't work in .vimrc; 
 	To be Done;
-2. Test for octave_function how_to_definition in and out of function;
+2. Test for octave function how to definition in and out of function;
 	To be Done;
 	ex: 
 	```
@@ -192,4 +197,103 @@ Mon Sep 24 08:41:51 CST 2018
 2. [D] How to indent with markdown:
 	* To indent with Bullet list and Numbered list;
 	* Bullet list and Numbered list **CAN** indent with four space or a table within these list;
-3. 
+3. [D] Make ycm disable in .md file, .md file "->" and "_ _" display abnormal, Solve it:
+	1. The problem is because the vim will diagnose the illegal word with it own principle, we can use ycm's principle instead. So remove following code from .vimrc, ycm will be opened when open .md files;
+```
+let g:ycm_filetype_blacklist={ 'markdown':1}
+```
+	2. Another way to solve the problem is: just type `:syntax off`, and then the syntax check of vim is off;
+4. [TBD] Solve the problem of comparison of int and unsigned int from ycm:
+	* Simply turn off the warning/error notification isn't a good idea, don't get used to it;
+	* The right way is to cast `signed int` to `unsigned int` by using`(unsigned)i` force conversion:
+```
+string s;
+for(int i = 0; (unsigned)i < s.size(); ++i){
+	...
+}
+``` 
+
+Tue Sep 25 08:45:27 CST 2018
+1. [D]Formular output with std::cout:
+
+```
+	int i = 0x80000001;
+	cout << i << "\t: 0x"<< hex <<  i << endl;
+	int j = -1;
+	cout << j << "\t: 0x" << hex << j << endl;
+	cin.get();
+
+```
+2. [TBD]Update gdb to higher version to try to solve the tui mess problem. Already update to newest version 8.2, but the problem is still here. 
+
+3. 时间利用率太低了，有的时候一个算法要用5-6个小时才能完成，而且，书本或者是基础知识的学习也是很有必要的，但是有的时候要解决一个基本的问题也会困住两个多小时。每次被困住太久的时候，就会情绪上产生急躁的感觉，而且心理上有时也会有对于特定问题的排斥和逃避的情绪。所以，解决上述问题已经成为了当务之急：
+	1. 首先，近期，每天晚上的时候要学习《王道》的数据结构，先把书看一遍，大概每天有固定的两个多小时的学习时间，等学习完了这个，要把《王道》系列从头复习巩固几遍；
+	2. 每天再花固定的两个小时学习《Learn Vim the hard way》/《鸟哥的Linux》/《gdb的使用》/《Learn python the hard way》的书籍/网站，这一部分的关键是不能光看,更重要的是要跟着书本或者网站一步一步的敲代码，这样才能慢慢的形成肌肉记忆/大脑思维链接；
+	3. 每天的重要任务还是leetcode，是计算一下每天除了上述时间外还有多久的有效时间，答案是5.5小时，如果运用得到，应该能完成3个算法。关键问题在于，不能在一道题上卡太长时间，每道题的思考时间我认为一个小时就够了，如果思考不出来，可以去看别人的代码来参考，只能看思路，不能照抄照搬，每道题如果3个小时还没有做出来，就要考虑暂时放一放，回家了或空闲的时间可以思考，有思路的时候再试；
+	4. 验证一些衍生出来的其他问题，对于这类问题，我认为也要控制好时间，不要恋战，如果超过45分钟，就要考虑暂时放一放；
+4. [TBD]Learn install application:
+5. Memset's unit is size_t, what is size_t in std::c++ ? 
+
+
+Wed Sep 26 08:39:23 CST 2018
+1. 2H <<bird>>
+2. [TBD] How to ignore the file without file suffix when using git push, what should i change the .gitignore file? 
+3. [TBD] How to let the file name to be .out when using <F5> compile with gdb?  
+4. [TBD]Create a Binary Tree for testing.
+5. Finish 3 leetcode.
+
+
+Thu Sep 27 08:42:26 CST 2018
+1. 2.5H <<vbird>>
+2. [TBD]关于c++变量及函数命名的首字母大小写的问题;
+3. The problem about `int arr[n]`, how to reach the goal? 
+4. Member function using global function, how to make it be used? 
+
+
+Fri Sep 28 11:16:20 CST 2018
+
+1. tui support in gdb 8.2: first make sure you have `libncurses5` and `libncurses5-dev`, then install from source code with following command:
+```
+	* ./configure --enable-gui=yes
+	* make
+	* make install
+```
+	* When notice `permission denied`, we can use `sudo` to execute above command;
+2. [TBD] Build source with multi-core when using `make`?
+3. [D] GDB print the std container readable, for example print vector like a arry;
+	* [S] Using pvector/plist/... command, these cammand is according to stl-view.gdb in .gdbinit. 
+4. 
+
+	
+
+Sat Sep 29 08:49:55 CST 2018
+1. [TBD]Markdown table
+2. 2H <<vbird>>
+3. clarify an array in dump? 
+	* `int *p = new int[n]` Why do I clarify an array in dump? Because It can't clarify an unknow number of space in stack. Remember to initialize the space. Otherwise it may not initialize with 0. A good way to init is using memset, but remember setmem's unit is size_t(char);
+4. 关于用两个序列构造一棵树的心得：
+	1. 可以使用递归或者非递归的方法，如果使用非递归的方法来构造二叉树
+		1. Preorder+Inorder: 需要借助一个栈，和一个tag标签数组。具体做法：从Preorder中从前往后走，查找它在Inorder中的位置，并查看它左右两侧有没有空位置：
+			* 先把Preorder第一个元素入栈；
+			* 查看栈顶元素的标签数组；
+			* 左边空，先挂左边，入栈,修改标签；
+			* 左边不空右边空，挂右边，入栈,修改标签；
+			* 左边不空右边也不空，出栈；
+			* 直至栈为空且Preorder也走到了尾部为止；
+		2. Postorder+Inorder: 它与Preorder+Inorder的方法是类似的，只是它是从Postorder的尾巴从后往前走，每一个数也要查询他在Inorder中的位置，并查看它左右两端是否为空，另一个区别是，若左右都可以插入时，它是优先插入到右子树上的;
+		3. levelorder+Inorder: 它需要借助一个队列。
+	2. 这一类问题，如果思路不清晰的话可以花一个稍微复杂一点的图，在纸上跑几遍过程，思路就慢慢的遍清晰了。
+ 
+
+
+ 
+ 
+
+
+ 
+
+ 
+
+
+ 
+4. 
