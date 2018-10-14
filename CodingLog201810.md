@@ -82,16 +82,15 @@ ma 		//set mark a/A(global mark)
 
 Sun Oct 14 08:44:27 CST 2018
 
-Block:
-> asfd
->
-> sad 
->
-> adfa
-
 TaskList:
-- [ ] Task1.
-- [ ] Task2.
-- [x] Task3.
-- [] Task4.
+- [x] vbird 2H
+- [ ] practice BST and AVL one time
+- [ ] 1 leetcode
+
+Workflow:
+1. Markdown TaskList: `- [ ] TaskTodo` and `- [x] TaskDone`;
+2. Git commmits should in best practice be fairly atomic and effect few files;
+3. If you want something to be done each time you restart computer, you need to write something in `~/.bashrc`;
+4. [TBD] 搜狗输入法的安装，由于需要重启，等我学完脚本的书写，能够自动化一系列开机流程后，再进行安装；
+5. 还是相当的不熟练，还是要多敲，只有敲才能发现问题，问题还是有很多的；
 
