@@ -278,7 +278,7 @@ Workflow:
 1. main's arguments argc and argv? 
 	* argv is always a type of `char**`, so all the value passed into main is a char string, If we want other kind of value, we should transfer ourselves. 
 	* How to pass the int and string to main() from command line? 
-	```
+```
 #include<cstdlib>
 #include<iostream>
 #include<string>
@@ -309,7 +309,7 @@ int main(int argc, char** argv){
 	return 0;
 }
 
-	```
+```
 2. stringstream: | << | .str() |
 ```
 #include<iostream>
