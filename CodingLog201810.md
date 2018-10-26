@@ -93,4 +93,243 @@ Workflow:
 3. If you want something to be done each time you restart computer, you need to write something in `~/.bashrc`;
 4. [TBD] 搜狗输入法的安装，由于需要重启，等我学完脚本的书写，能够自动化一系列开机流程后，再进行安装；
 5. 还是相当的不熟练，还是要多敲，只有敲才能发现问题，问题还是有很多的；
+6. Can't make use of mytime effectively, think about how to make good use of time. 
 
+
+Mon Oct 15 08:38:28 CST 2018
+TaskList:
+- [x] vbird 2H
+- [x] finish last day's practice
+- [x] 1 leetcode
+
+Workflow:
+1. Find a new way to navigate to last day's working place:
+	* Using vimium's mark, just set the mark `mL` and second day, I want to get the last place, then I should type `L FOR TWICE(first to get the page and second to get the place) to get to the place; 
+2. Using `` to get to the last place where it isn't by j/k/gg/G/;
+3. `if; else` && `if; if`
+	* `if; else if; else if; else` 有点类似于分支语句，前述四个分支只 按顺序选取一个进入，后面的即使有满足条件的也不进入。所以else if使用的时候，要从全集开始一步一步分割，最后直到分割完成，后者剩下一些（此时没有最后一个else）。它适合于，四种情况，只有一种情况才能发生，就用elseif来分割。
+	* `if; if; if; if;` 有点顺序逻辑，判断执行完第一个if还要判断执行第二个。它适合于各个条件都需要判断，即四种情况可能同时发生几种。
+4. In order to easily debug using gdb, so don't define variable in the forloop. I know maybe It's best for some reason to define in the forloop, but before I find a batter way to debug in this situation, Don't use this way;   
+5. [TBD] Find a effective procedure to write program. Reading realitive books;  
+	* First, write down the steps of the implementation; 
+	* Second, write down the test main and test data; 
+6. One directory exclude some files: `!(filename)`
+
+Tue Oct 16 08:35:28 CST 2018
+
+TaskList:
+- [ ] 2H vbird
+- [ ] Search algorithms study
+- [ ] 2 leetcode
+
+Workflow:
+1. [Already take 8H unfinished] .vimrc's `,sv` doesn't work;
+	1. Inorder to remove stuff, the easiest way is to simply quit vim and restart it;
+	2. Alternatively, you should explicit remove the stuff from the runtime model; for most stuff, there are corresponding negating commands:
+		* The inverse of `:map` is `:unmap`, The inverse of `:iabbrev @@` is `:iunabbrev @@`;
+		* There's `:command` and `delcommand`;
+		* `autocmd` can be removed via `:autocmd!`, this can only effect in the **future** buffers. If I want make it effect, I want type `:nunmap <buffer> <F8> `;
+	3. It waste too much time!
+
+2. [TBD] Rewriting myown .vimrc file, make sure each item can be understood. 
+3. 看着鸟哥看着看着就去研究.vimrc了，然后大概研究了两个小时左右，返回来再看鸟哥的时候，感觉就有点不在状态了，然后就转而去思考网页的鸟哥的不好的地方，就在想自己的那本书，然后就转去看关于书籍装订的东东了。就这样，大概今天上午浪费了三个小时（一共才三个半小时）；
+4. 在图书馆还是不能靠椅子的背，刚开始靠以下没有什么问题，可是靠着靠着，精神就几种不起来了，然后就慢慢瘫到到后面去了。所以，为了此种现象的不再发生，同时也要养成一个终身的好习惯：禁止靠椅子背，强化背部肌肉，收紧下巴；
+5. [TBD] 关于《鸟哥》，每天上午看它的效率有点太低了，如何能有效提高？
+	* 
+6. Append a line to leetcode repository's README.md: `>>` 
+
+
+Wed Oct 17 08:36:19 CST 2018
+
+TackList:
+- [ ] 2H vbird, complete Chap.10; 
+- [ ] Searching algorithms study, 3 method, if time is not enough, do it in the night; 
+- [ ] 3 leetcode  
+
+Workflow:
+1. Effective input in bash
+	* `<C-a>` Get to the first character of cmd line.
+	* `<C-j>` Go forward by character.
+	* `<C-w>` Delete backward by a word.
+	* `<C-e>` Go to the end of cmd line.
+	* `<C-u>` Delete the whole thing before cursor. 
+
+
+Fri Oct 19 08:38:09 CST 2018
+
+TaskList:
+- [x] 2H vbird
+- [x] 2 leetcode
+- [ ] Study search algorithms
+
+Workflow:
+1. [D] How to get program's running time.  
+	* time command
+2. [TBD] How to test the vps's connection.
+	1. 主机信息测试：
+		* wget -q0- bench.sh | bash 
+		* 或者 curl -Lso- bench.sh |bash
+	2. 主机与客户端之间的网速：iperf3
+		* Server: iperf3 -s
+		* Client: iperf3 -c x.x.x.x
+		* NOTE: Must open the relative port. 
+
+Sat Oct 20 08:39:39 CST 2018
+
+TaskList:
+- [x] 2H vbird
+- [ ] 2 leetcode
+- [ ] Writing Searching algorithms
+
+Workflow:
+1. [TBD] Learn the basic usage of REX and find some exercises to practise to make me master it to a very high level. 
+2. [TBD] How to substitute multiple blank to one blank with a simple command or Rex. 
+3. [TBD] How to formulate the source code, especially when I copy some code from website? 
+4. [TBD] Using Pointer Method OR Struct Method, How to choice? What advantages for both? 
+
+
+
+Sun Oct 21 08:37:20 CST 2018
+TaskList:
+- [x] 2H vbird
+- [] 2 leetcode
+- [] Sorting algorithms
+
+
+Workflow:
+1. [TBD] Can struct be compared without have the operand == ?
+	* No, It can't, We must customize operand == ;
+	* [TBD] How to define a function of operand == for struct or class? 
+	* Assignement operand = works without customize. 
+2. I will code in the morning, and learn linux in the afternoon. Maybe My coding could be more effective this way. Because my brain seems inactive afternoon, and I can hardly focusing on coding. The leetcode is so important that I must put most of my time and energy to it. Come on guys, You can do it. 
+3. [TBD] How to disable vim's cursor blink?
+	* It's not about vim, It's about terminal's setting, Using the following method in terminal to disable the cursor blink:
+		* gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default|tr -d \')/ cursor-blink-mode off
+
+
+
+
+Mon Oct 22 17:13:40 CST 2018
+
+TaskList:
+- [] 2 leetcode;
+
+Workflow:
+1. [TBD] Practise using c++ sort;
+
+
+
+Tue Oct 23 08:38:56 CST 2018
+TaskList:
+- [x] Three kind of sort including insert, swap, select;
+- [x] 2H vbird;
+- [ ] 2 leetcode;
+
+
+workflow:
+1. [TBD] Using `forloop` or `while` in cpp? How to make a choice?  
+2. Writing in English is important to me, I must practice more and more to improve this skill. I should try to writing with English as much as possible; 
+3. [TBD] How to use sentinel in the 0-beginning array? 
+4. If I don't have thought of problem solving or stuck with something, The next thing I should do is using gdb to run the program, and find some clue. 
+5. 
+
+
+
+Wed Oct 24 07:51:09 CST 2018
+
+TaskList:
+- [x] Coding yesterday's work and get familiar with it. 
+- [ ] 2 leetcode.
+- [x] 2H vbird. 
+
+Workflow:
+1. Open pdf in terminal `gvfs-open filename`;
+2. Which is more scientific? First writing big function or first writing small function? I prefer big function. Big function is helpful to clear the steps of problem solving. First wirting out the bigger function could be more efficient. Small function can be verified by test function. 
+3. [TBD] stringstream, Input and output string stream. To be read!
+4. [TBD] How to set C++ program's argument in terminal command line? 
+5. [TBD] leetcode repository refactor. 
+
+
+Thu Oct 25 07:00:20 CST 2018
+
+TaskList:
+- [x] 3 leetcode | ###
+- [x] 2H vbird
+- [ ] study textbook of chapter sort
+
+Workflow:
+1. [TBD] Make a alias cdls, which means change directory and list files. 
+2. [TBD] Make cursor blink option in .bashrc
+3. [TBD] Cpp function stringstream or input/output. 
+4. [TBD] Array subscript is char
+5. 
+
+
+Fri Oct 26 08:38:41 CST 2018
+
+TaskList:
+
+- [] 3 leetcode | 
+- [] 2H vbird
+- [] study textbook of chapter sort
+
+
+Workflow:
+1. main's arguments argc and argv? 
+	* argv is always a type of `char**`, so all the value passed into main is a char string, If we want other kind of value, we should transfer ourselves. 
+	* How to pass the int and string to main() from command line? 
+	```
+#include<cstdlib>
+#include<iostream>
+#include<string>
+using namespace std;
+int main(int argc, char** argv){
+
+	cout << argc << endl;
+	// Using forloop to print
+	for(int i = 0; i < argc; ++i){
+		cout << "argv[" << i << "]: "; 
+		for(int j=0; argv[i][j] != 0; ++j)
+			cout << argv[i][j] ;
+		cout << endl;
+	}
+
+	// Using c <cstdlib>
+	int n;
+	if(argc > 1){
+		n = atoi(argv[1]);
+	}
+
+	// Using c++ <string>
+	for(int i = 1; i < argc; ++i){
+		cout << "argv[" << i << "]: "; 
+		cout << stoi(argv[i]);
+		cout << endl;
+	}
+	return 0;
+}
+
+	```
+2. stringstream: | << | .str() |
+```
+#include<iostream>
+#include<sstream>
+using namespace std;
+int main(){
+	stringstream ss;
+	string str = "Hello world!";
+	ss << str;
+	cout << ss.str() << endl;
+	// << append string to orignal string
+	ss << " Nice to meet you! ";	
+	cout << ss.str() << endl;
+	// ss.str() can set/get ss
+	ss.str("What a wonderful world! ");
+	cout << ss.str() << endl;
+	return 0;
+}
+
+```
+3. [TBD] [#148 sortList](https://github.com/haoel/leetcode/blob/master/algorithms/cpp/sortList/sortList.cpp) review
+
+4. 
