@@ -244,6 +244,7 @@ TakList:
 - [j] hello
 - [x ] hello
 - [ x] hello
+- [ ] hello
 
 1. [TBD] Think about the relationship of algorithms learning and the leetcode practicing, How to deal with the relationship between the two parties. 
 	* This week, I use the time for coding to read the algorithms book, so the counts of leetcode didn't increase. 
