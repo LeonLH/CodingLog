@@ -269,15 +269,16 @@ Fri Oct 26 08:38:41 CST 2018
 
 TaskList:
 
-- [] 3 leetcode | 
-- [] 2H vbird
-- [] study textbook of chapter sort
+- [ ] 3 leetcode | ##
+- [x] 2H vbird
+- [x] study textbook of chapter sort
 
 
 Workflow:
 1. main's arguments argc and argv? 
 	* argv is always a type of `char**`, so all the value passed into main is a char string, If we want other kind of value, we should transfer ourselves. 
 	* How to pass the int and string to main() from command line? 
+
 ```
 #include<cstdlib>
 #include<iostream>
@@ -310,7 +311,9 @@ int main(int argc, char** argv){
 }
 
 ```
+
 2. stringstream: | << | .str() |
+
 ```
 #include<iostream>
 #include<sstream>
@@ -330,6 +333,70 @@ int main(){
 }
 
 ```
+
 3. [TBD] [#148 sortList](https://github.com/haoel/leetcode/blob/master/algorithms/cpp/sortList/sortList.cpp) review
 
-4. 
+4. [TBD] Adding a level header at each day's beginning. 
+5. [TBD] BIT: Binary Indexed Tree. leetcode #315
+
+
+
+Sat Oct 27 08:42:05 CST 2018
+
+TaskList:
+- [ ] 2 leetcode
+- [ ] 2H vbird
+- [ ] implement mergeSort
+- [x] review heapSort
+- [x] review BST
+
+Workflow:
+1. 如果程序运行的结果不符合预期，debug的时候顺着结果走一遍，就可以定位到出错的地方；
+2. Refactor BST's delete;  
+3. sudo apt-get install mupdf
+E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)
+E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
+
+Sun Oct 28 09:07:25 CST 2018
+
+TaskList:
+- [ ] 2 leetcode
+- [ ] 2H vbird
+- [x] implement mergeSort
+
+Workflow:
+1. [D] vim-like pdf viewer: zathura & apvlv. 
+2. [D] definition and declaration
+
+
+Tue Oct 30 08:43:59 CST 2018
+
+TaskList:
+- [] 3 leetcode | #
+- [] 2H vbird
+- [] reading text book
+
+Workflow:
+1. command ln cannot be used in the file g++ will genarate, because g++ compile the file and genarate a new file, and then replace the old one, NOT modify the file as I expected. 
+2. [TBD] How to modify source and make it effective during debug? 
+3. [TBD] Is it right tui will not mess up when using printf to output a line return? ---> It will still turns it will mess up. Can I try the version of Grew's using in the youtube?  
+4. Linked-list's bounder would better to using nullptr, but one's next node, because If we use pointer to operate content, one's next will be changed, and we still think the node unchanged is bounder. Thus the bug will come. 
+5. [D] leetcode daily coding table. 
+6. [TBD] grep, sed, awk should practice for more. 
+7. [D] Refactor the directory. 
+8. [TBD] How to quickly make gdb run a circle of program? 
+
+
+Wed Oct 31 08:35:07 CST 2018
+
+TaskList:
+- [x] 3 leetcode	|####
+- [ ] 2H vbird		|Hn
+
+Workflow:
+1. Deep copy and Swallow copy:
+	* Deep copy is copy the pointer's value, and have a different address, so we can change the value but not infuent other pointer's value.	* Swallow copy is copy the value's address, If we change the value, other pointer's value also be changed, it can make sure the value is alway updated. 
+2. date --date=1225 [+FORMAT]: output 25th Oct as the format of [+FORMAT];
+
+
+
