@@ -240,9 +240,9 @@ TakList:
 - [] KMP implementation. 
 
 1. [TBD] Think about the relationship of algorithms learning and the leetcode practicing, How to deal with the relationship between the two parties. 
-	* This week, I use the time for coding to read the algorithms book, so the counts of leetcode didn't increase. 
+	* This week, I take the time to read the algorithms book, so the counts of leetcode didn't increase. 
 
-2. [TBD] How to make each line of date to be a header of md file. In other words, how to add '###' to each line of date with very few operations. Maybe it need to use tool of awk/sed/grep. 
+2. [D] How to make each line of date to be a header of md file. In other words, how to add '###' to each line of date with very few operations. Maybe it need to use tool of awk/sed/grep. 
 
 3. Always, we are talking about efficiency, but efficiency can not be high at the very beginning, We need to practice to improve it. So be patient, things take time. 
 
@@ -261,3 +261,91 @@ TakList:
 		1. A variabel with internal linkage is called an internal variable(or static variable). Variable with internal linkage can be used anywhere within the file they are defined in, but can not be referenced outside the file they exits in. 
 [Reference](https://www.learncpp.com/cpp-tutorial/42-global-variables/)
 7. Variable property: scope, duration, linkage. 
+
+8. [TBD] Static Keyword in C++, [Reference](https://www.geeksforgeeks.org/static-keyword-cpp/)
+
+
+
+### Wed Nov 21 08:38:57 CST 2018
+
+TaskList:
+- [] 
+
+
+Workflow:
+
+1. Hard to think peaceful when there is people aroud me, using English feels better and more private. 
+
+2. [TBD] markdown real-time preview software. 
+
+3. There are too many things to learn, review, practise, summary etc. But time is not infinite, and life is not infinite. There are also too many things which is funny, interesting and beautiful, but life is limited. Time is valuable. So I must take my time to the things more valuable, and I don't have much time to waste any more. 
+	Even thought in the scope of one field, such as Computer Science, There are still many things to study, let alone I need to learn or to know many important feild such as Math, Physics, Ecnomics etc. So how to find where to place myself? 
+	First, personally, I think **patient** is most important, anxious can do nothing but to mislead me a wrong way which may waste a lot of time. If I begin to waste time, things will never make progress let alone done. While if I can be more patient, maybe things is stuck and can hardly make progress, but It's temprary and I can fix it anyway. Pain is inevitable but never give up, just be patient. 
+	Second, **effeciency** is also important. So how to makes my time more effective? Get stuck is very common in coding, maybe the following method can help. 
+	* **Let it go** when you have tried for a while, don't let it inflence your planning. Notice, don't just let it go like you never see them, write it done and marked as TBD.
+	* When you counter a problem which is important and **can not passby** and needs a lot of time to solve. How to deal with this kind of problem? Well, this may be difficult to handle, always I allocate 1 day to a certain problem but at the end of day, It is not solved and I would allocate another day, but it couldn't be done yet and I need more time. So I spend more and more time, often after 3-5 days, My plan is throwed into disorder. A typical problem study can have the following steps:
+		* Understanding problem;
+		* Researching problem;
+		* Implement problem;
+		* Summing up problem.
+	I must finish above 4 steps within 2 days(at most 3 days), If I can't, I must temporary shelving it. I know it hard to let it go, It actually not let it go, just temporary shelving and find a specific time within a month to solve it again.   
+	The first two steps can be learn from book, and the implement step is better to refer the website/vedio/book. The last step, summary, is to write down the following 3 steps. 
+	* **Make a plan** 
+	Third, **make a deadline** for a book, course, learning-plan, etc
+		* Try not to exceed 3 month to finish a course. 
+		* Try not to exceed 1 month to read a whole book(500p) for first time. 
+
+
+
+### Thu Nov 22 15:52:04 CST 2018
+
+1. 3.5H reading book about Divide-and-conquer and Dynamic-Programming in the morning. 
+2. 1H read the ppt about Dynamic-Programming. 
+3. 
+
+
+
+### Fri Nov 23 11:43:11 CST 2018
+
+Workflow:
+1. 3H reading book about Greedy algorithm. 
+2. 3 leetcodes.   
+
+
+### Sat Nov 24 16:58:58 CST 2018
+
+Workflow:
+1. container use:
+	* map
+	* set
+	* deque
+	* priority_queue
+	* list
+	* forward_list
+
+
+### Tue Nov 27 08:41:31 CST 2018
+
+TaskList:
+- [] 
+- [] 2 leetcode
+- [] review learned content  
+
+Workflow:
+1. 运筹学：
+	1. 子方向：线性规划，整数规划，非线性规划，随即规划，随机过程，存储量，博弈论，鲁棒优化，最优控制，等
+	2. **运筹学里面更重要的是建模。**换言之，就是现实问题与数学语言是怎么对应的。
+		* 建模：
+			1. 抓住现实问题的本质，什么才是问题里面最重要的因素
+			2. 用最合适的数学语言和它对应
+			3. 建立的模型要容易解
+		* 明白各种模型适用什么结构的问题，初学的话比如看书/看视频，第一步是，每一章只看前面讲的建模(modeling/formulation)那一节。
+		* 懂得了对具体问题的建模，再拿一个软件解一下模型就可以了。
+
+
+
+### Wed Nov 28 16:37:02 CST 2018
+
+workflow:
+1. 5H reading book about algorithm.
+2. 
