@@ -1,0 +1,185 @@
+### Mon Jan  7 10:19:56 CST 2019
+
+**Workflow:**
+1. Install YCM to my ubuntu:(Takes One and a half days)
+At the beginning, the method is all from github's ReadMe page of YouCompleteMe. And I add some key points that I've encountered. 
+	1. Before installation, you must make sure 
+		1. Your system can use apt-get normally, which means you've opened all of 3 options in Install updates from: in the software&Updates section;
+		2. Make sure all the software(vim, python2/3) meet the needs;
+	2. Following the Linux 64-bit Installation steps:
+		1. Install YouCompleteMe with Vundle, It may take a while justbe patient;
+		2. Install development tools, CMake, and Python headers;
+		3. Compiling YCM with semantic support for C-family languages;
+			- Note: This step will generate ycm_core.so file, otherwise, It means you have some mistake before this step. 
+	3. Provide the compilation flags for you project to YCM:
+		1. adding the following option to your .vimrc file: 
+```
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+```
+2. [TBD] How to monitor current network speed of unbuntu?
+
+
+### Tue Jan  8 08:38:06 CST 2019
+
+**Daliy Target:**
+- [ ] Conclude book "The Design and Analysis of Algorithms" for at least **One** Chapter;
+- [ ] Review Basic algorithms code, such as sort, search. 
+
+**Workflow:**
+1. Install vim-markdown-preview script:
+	1. Requirements:
+		1. grip: `pip install grip`;
+			- put `let vim_markdown_preview_github=1` in .vimrc;
+		2. xdotool: `sudo apt-get install xdotool`;
+		3. chrome
+	2. Inatall it with Vundle:
+		- Add `Plugin 'JamshedVesuna/vim-markdown-preview'` to .vimrc.
+		- open vim and type `:PluginInstall`;
+	3. Usage: `ctrl-p` to invoking the plugin to show html page in chrome.
+
+2. [D] User defined completion(^U^P^N) Back at original. 
+	- Problem solved by adding `set shortmess+=c` in .vimrc, this problem maybe caused by YCM script and related to vim's feature called shortmess. 
+	- After add the `plasticboy/vim-markdown` and `godlygeek/tabular` scripts, This problem is return. Then I note off the `set shortmess+=c`, the problem solved.
+
+3. Add a vim script `plasticboy/vim-markdown`, it can make .md file looks pretty good, and can conceal the link string between the parenthesis.
+	- It can conceal asterisk/underline/link-string/etc. 
+	- It can fold the file of markdown files. 
+4. [TBD] Install Input App to make input of Chinese character more effective on ubuntu. 
+
+
+### Wed Jan  9 07:52:35 CST 2019
+
+**Daily Target**:
+- [x] Reading textbook for at least two hours. 
+- [x] First leetcode, easy, 35min;
+- [x] Second leetcode, hard, 2H;
+- [x] Third leetcode, medium, 2H;
+
+**Workflow**:
+
+1. [TBD] 对于那些算法里面是大于还是大于等于，包不包括等于号的问题，找专门的时间总结一下；
+2. One of the key point of solving leetcode problem is to find out a typical test data;
+3. Condition break point in gdb: `break filename.cpp:10 if i == 5`;
+4. [TBD] The characteristic of map and set; 
+5. You must learn form someone who's idea_of_algorithm/skill_of_codingis greater than you, Only in this way, you can grow faster. You shouldn't work on your own, It's harmful for time because it's too slow, you should learn to stand on the shoulder of giant. 
+
+
+### Thu Jan 10 11:13:01 CST 2019
+
+**Daily Target**:
+- [x] 2 hours textbook
+- [x] first leetcode, 3.5H, medium, Self
+- [ ] second leetcode
+- [ ] third leetcode
+
+**Workflow**:
+1. It seems simple, but when you are implementing the it, It turns out that not that simple as you thought. 
+2. First, you need to remember all of the classic problem and classic solution. You must be very familiar to above things, then you can easily migrate to other issues. 
+3. The vector's practice is over today, tommorow I will work on "sort" category. 
+4. [TBD] leetcode #55 Jump Game, may need dynamic programming or backtracking to solve it, you should return to it when you've review the knowledge accordingly. 
+
+
+
+### Fri Jan 11 11:13:16 CST 2019
+
+**Daily Target**
+- [x] 3 hours sort learning. 
+- [ ] first leetcode 
+- [ ] second leetcode
+- [ ] third leetcode 
+
+**Workflow**:
+1. [TBD] Where should I get test set and corresponding result for my sort algorithms. Otherwise, I cannot make sure my algorithms is bug-free. In another words, How to test my sort algorithms with many test set?
+2. [TBD] Write a software to test my sort algorithms which can automaticly usig different test examples and return the result of error result.
+3. View a pointer like an array in GDB: `p *array@nlen`
+4. When to use `for(::){}` and when to use `while(){}` :
+	- use while:
+		1. if I have already initialize the iterator;
+		2. if the condition of loop is some special value, like 1;
+		3. if the increment is a little complex;
+	- use for:
+		1. if the loop is simple, and for quickly implementing loop;
+		2. for some standard algorithms, it can make program concise;
+	- To summarize:
+		- If the program is complicated, use while, otherwise, use for.
+ 
+
+
+### Sat Jan 12 14:24:38 CST 2019
+
+**Daily Target**:
+- [x] 2 Hours reading.
+- [ ] sort finished. 
+- [ ] checking for sort algorithms. 
+
+**Workflow**;
+1. [D] Install an input app on ubuntu. 
+
+**Thought**:
+
+
+
+### Sun Jan 13 06:30:06 CST 2019
+
+**Workflow**:
+1. [TBD] formalize vbird_linux note in markdown form. 
+
+
+### Tue Jan 15 07:42:32 CST 2019
+
+**Daily Target**:
+- [x] 3.5 hours reading textbook;
+- [x] The rest of sort;
+
+
+1. `ln` the source path is relative to link path, you must use link directory as a referrence standard. 
+	- `ln -s relative_path_to_link_directory/source link_directory/`
+	- `ln -s absolute_path_of_source/source link_directory`
+2. The time of practice for typing shouldn't be assigned at normal time of daily working.  It should be arranged at the time when I am not busy or the time which is fragnmented time. 
+3. 
+
+
+### Wed Jan 16 07:43:00 CST 2019
+
+**Daily Target**:
+- [x] 3.5 hours textbook review
+- [x] tree part I
+- [ ] tree part II
+- [ ] tree part III
+
+1. Memorization is an important skill in learning things. 
+2. When using `vim-markdown-preview`, must manually copy the link from chrome to firefox once, then typing `Ctrl-P` can be effective, otherwise it wouldn't works on firefox but only on chrome. 
+3. When doing the practice of tree, the first job is to initialize a tree or build a tree, but this is a little more difficult than traversing a tree. So be familiar to initialization of a tree, then you can operate it in many operations.
+4. Must be familiar to the grammer of cpp, recoding the works I've done before. 
+
+
+
+### Thu Jan 17 14:30:12 CST 2019
+
+**Daily Target**:
+- [] 3.5 hours textbook reading. 
+- [] tree part II
+- [] tree part III
+
+**Workflow**:
+1. You must write many times about the basic algorithms, such as In/Pre/Post/LevelOrderRecusive/IterativeTraversal to a tree. It's important and worth many time training. 
+2. The comment is very important when you review the code you've wrote before. 
+
+
+### Fri Jan 18 06:21:02 CST 2019
+
+**Daily Target**:
+- [] 
+-
+
+**Workflow**:
+1. I don't know if I'm right about this thing which is I wrote some codes about 200 lines for a single leetcode problem and takes more than 5 hours usually. This thing must be wrong, a leetcode problem should be finished within 2 hours, which I think is pretty normal. So just make sure you can finish it within two hours. 
+2. [TBD] The Technological process of writing a software:
+	1. Writing down the 
+
+
+### Sat Jan 19 13:02:06 CST 2019
+
+**Workflow**:
+1. Make sure the line is less than 80 characters long, when it comes to nearly end of line, you need linefeed **Both** in Cpp and python's code.
+2. 
